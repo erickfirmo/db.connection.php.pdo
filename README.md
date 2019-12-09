@@ -23,7 +23,7 @@ composer require erickfirmo/dbconnection
   require __DIR__ . '/vendor/autoload.php';
 
   // Conexão com o banco de dados MySQL usando PDO
-  // Defina qual será o arquivo de configuração a partir da raíz do projeto
+  // Defina qual será o arquivo de configuração a partir da raiz do projeto
   new \ErickFirmo\DBConnection('config/database.php');
 
 ```
