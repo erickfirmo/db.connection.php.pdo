@@ -1,5 +1,6 @@
 {
     "name": "erickfirmo/dbconnection",
+    "description": "PDO database library",
     "keywords": ["database", "connection", "pdo", "mysql", "php", "oop", "sql", "php-class", "mysql-database", "php7", "db"],
     "type": "library",
     "authors": [
