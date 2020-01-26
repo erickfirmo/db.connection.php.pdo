@@ -1,6 +1,6 @@
 # DBConnection PDO
 
-Classe PHP para conexão com banco de dados MySQL usando PDO. Desenvolvido por Érick Firmo (BR) http://erickfirmo.dev
+PHP class for connection to MySQL database using PDO. Developed by Érick Firmo (BR) http://erickfirmo.dev
 
 
 ## Requirements
