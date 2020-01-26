@@ -3,12 +3,12 @@
 Classe PHP para conexão com banco de dados MySQL usando PDO. Desenvolvido por Érick Firmo (BR) http://erickfirmo.dev
 
 
-## Requerimentos
-- PHP 7 ou superior
+## Requirements
+- PHP 7 >=
 
 
-## Instalação
-Para instalar com o composer:
+## Install
+To install with composer:
 
 
 ```sh
@@ -16,25 +16,25 @@ composer require erickfirmo/dbconnection
 ```
 
 
-## Uso Básico
+## Usage
 ```php
 <?php
-  // Requer o autoloader do composer
+  // Require composer autoloader
   require __DIR__ . '/vendor/autoload.php';
 
-  // Conexão com o banco de dados MySQL usando PDO
-  // Defina qual será o arquivo de configuração a partir da raiz do projeto
-  new \ErickFirmo\DBConnection('config/database.php');
+  // Connection to MySQL database using DOP
+  // Define the configuration file from the project root
+  new \ErickFirmo\DBConnection('../config/database.php');
 
 ```
 
-### Arquivo de configuração do banco de dados
-Crie um arquivo que retorne um array com as configurações do banco de dados:
+### Database Settings
+Return an array with the database settings:
 ```php
 <?php
 
   return [
-    'host' => '<server>',
+    'host' => 'localhost',
     'db_user' => '<user>',
     'db_password' => '<password>',
     'db_name' => '<database_name>',
@@ -43,9 +43,3 @@ Crie um arquivo que retorne um array com as configurações do banco de dados:
 ];
 
 ```
-
-<!--## Licença
-` erickfirmo/dbconnection` é uma biblioteca de código aberto licenciado sob a licença <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>.-->
-
-
-<!--<a href="https://erickfirmo.dev" target="_blank">Érick Firmo</a>-->
