@@ -1,6 +1,7 @@
 <?php
 
 namespace ErickFirmo;
+use PDO;
 
 class DBConnection
 {
