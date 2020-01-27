@@ -7,9 +7,9 @@ class DBConnection
 {
     protected $config;
 
-    public function __construct($configFile)
+    public function __construct()
     {
-        $this->setConfig($configFile);
+        $this->setConfig();
         return $this->getPDOConnection();
     }
 
@@ -30,8 +30,11 @@ class DBConnection
         }
     }
     
-    public function setConfig($configFile)
+    public function setConfig()
     {
-        $this->config = include $configFile;
+        if(isset($_SERVER['REQUEST_URI']))
+            $this->config = include '../config/database.php';
+        else
+            $this->config = include 'config/database.php';
     }
 }
