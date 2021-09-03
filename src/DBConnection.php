@@ -1,9 +1,6 @@
 <?php
 
-namespace ErickFirmo;
-use PDO;
-
-class DBConnection
+class Connection
 {
     protected $config;
 
@@ -20,21 +17,18 @@ class DBConnection
 
     public function getPDOConnection()
     {
-        $dsn = 'mysql:host='.$this->getConfig('host').';dbname='.$this->getConfig('db_name');
+        $dsn = 'mysql:host='.$this->getConfig('host').';dbname='.$this->getConfig('database');
         try {
-            $pdo = new PDO($dsn, $this->getConfig('db_user'), $this->getConfig('db_password'));
+            $pdo = new PDO($dsn, $this->getConfig('user'), $this->getConfig('password'));
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $pdo;
         } catch(PDOException $ex) {
-            print 'Erro: '.$ex->getMessage();
+            print 'Error: '.$ex->getMessage();
         }
     }
-    
+
     public function setConfig()
     {
-        if(isset($_SERVER['REQUEST_URI']))
-            $this->config = include '../config/database.php';
-        else
-            $this->config = include 'config/database.php';
+        $this->config = include isset($_SERVER['REQUEST_URI']) ? __DIR__.'/../config/database.php' : __DIR__.'/config/database.php';
     }
 }
