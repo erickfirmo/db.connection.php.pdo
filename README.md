@@ -35,13 +35,17 @@ Return an array with the database settings:
 ```php
 <?php
 
+  <?php
+
   return [
+
     'host' => 'localhost',
-    'db_user' => '<user>',
-    'db_password' => '<password>',
-    'db_name' => '<database_name>',
-    'db_driver' => 'mysql',
-    'charset' => 'utf-8'
-];
+    'driver' => 'mysql',
+    'charset' => 'utf-8',
+    'database' => '<database_name>',
+    'user' => '<database_user>',
+    'password' => '<database_password>'
+    
+  ];
 
 ```
