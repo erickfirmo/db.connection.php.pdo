@@ -19,6 +19,7 @@ composer require erickfirmo/dbconnection
 ## Usage
 ```php
 <?php
+
   // Require composer autoloader
   require __DIR__ . '/vendor/autoload.php';
 
@@ -34,8 +35,6 @@ composer require erickfirmo/dbconnection
 Return an array with the database settings:
 ```php
 <?php
-
-  <?php
 
   return [
 
