@@ -4,7 +4,7 @@ PHP class for connection to MySQL database using PDO. Developed by Érick Firmo 
 
 
 ## Requirements
-- PHP 7 >=
+- PHP >= 7
 
 
 ## Install
@@ -22,9 +22,11 @@ composer require erickfirmo/dbconnection
   // Require composer autoloader
   require __DIR__ . '/vendor/autoload.php';
 
-  // Connection to MySQL database using DOP
   // Define the configuration file from the project root
   new \ErickFirmo\DBConnection('../config/database.php');
+  
+  // Connection to MySQL database using PDO
+  $connection = (new \Connection())->getPDOConnection();
 
 ```
 
