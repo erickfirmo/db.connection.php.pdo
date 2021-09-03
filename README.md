@@ -22,9 +22,6 @@ composer require erickfirmo/dbconnection
 
   // Require composer autoloader
   require __DIR__ . '/vendor/autoload.php';
-
-  // Define the configuration file from the project root
-  new \ErickFirmo\DBConnection('../config/database.php');
   
   // Connection to MySQL database using PDO
   $connection = (new \Connection())->getPDOConnection();
